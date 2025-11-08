@@ -33,7 +33,15 @@ offchain-arbitrage/
 ├── contracts/             # Smart contracts
 │   └── src/
 │       └── FlashLoanReceiver.sol
-├── dashboard/             # Svelte dashboard (placeholder)
+├── dashboard/             # Svelte dashboard (COMPLETE!)
+│   ├── src/
+│   │   ├── routes/        # SvelteKit routes
+│   │   ├── lib/
+│   │   │   ├── components/  # Dashboard components
+│   │   │   ├── websocket.ts # Real-time WebSocket client
+│   │   │   ├── api.ts       # REST API client
+│   │   │   └── utils.ts     # Utility functions
+│   │   └── app.css        # TailwindCSS styles
 ├── config/
 │   └── arbitrage.config.json
 └── .env.example
@@ -134,6 +142,28 @@ npm start
 The bot will start with:
 - ✅ API Server: `http://localhost:3001`
 - ✅ WebSocket Server: `ws://localhost:3002`
+
+### Step 6: Start Dashboard (Optional but Recommended!)
+
+```bash
+cd ../dashboard
+
+# Install dependencies (first time only)
+npm install
+
+# Start development server
+npm run dev
+```
+
+The dashboard will be available at: **http://localhost:3000**
+
+Features:
+- 📊 Real-time price charts (Lightweight Charts)
+- 💡 Live opportunity feed
+- 📋 Execution log with transaction history
+- 📡 Relay statistics and performance
+- ⚙️ Configuration panel (live updates)
+- 🎮 Bot control (start/stop)
 
 ## 🎮 Usage
 
@@ -454,12 +484,18 @@ ws.onmessage = (event) => {
 
 ## 🚧 Development Roadmap
 
-- [ ] Dashboard (Svelte) - Phase 7
-- [ ] SQLite database for trade history
+- [x] **Dashboard (Svelte) - Phase 7** ✅ COMPLETE!
+  - Real-time price charts with Lightweight Charts
+  - Live opportunity feed
+  - Execution log with transaction history
+  - Relay statistics and performance monitoring
+  - Configuration panel with live updates
+  - Bot control interface
+- [ ] SQLite database for persistent trade history
 - [ ] Multi-asset support (beyond USDC-WETH)
 - [ ] Machine learning price prediction
 - [ ] Flashbots integration
-- [ ] Multi-chain support
+- [ ] Multi-chain support (Ethereum, Polygon, etc.)
 
 ## ⚠️ Disclaimer
 
