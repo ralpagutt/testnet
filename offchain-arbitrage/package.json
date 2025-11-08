@@ -1,0 +1,28 @@
+{
+  "name": "offchain-arbitrage",
+  "version": "1.0.0",
+  "description": "Off-Chain Arbitrage Bot for Arbitrum with MEV Protection",
+  "private": true,
+  "workspaces": [
+    "bot",
+    "dashboard",
+    "contracts"
+  ],
+  "scripts": {
+    "install:all": "npm install && npm install --workspace=bot && npm install --workspace=dashboard && npm install --workspace=contracts",
+    "dev:bot": "npm run dev --workspace=bot",
+    "dev:dashboard": "npm run dev --workspace=dashboard",
+    "deploy:contract": "npm run deploy --workspace=contracts",
+    "test:bot": "npm run test --workspace=bot",
+    "build:all": "npm run build --workspace=bot && npm run build --workspace=dashboard"
+  },
+  "keywords": [
+    "arbitrage",
+    "mev",
+    "flash-loan",
+    "defi",
+    "arbitrum"
+  ],
+  "author": "",
+  "license": "MIT"
+}

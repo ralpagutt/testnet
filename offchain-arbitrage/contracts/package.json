@@ -1,0 +1,20 @@
+{
+  "name": "arbitrage-contracts",
+  "version": "1.0.0",
+  "description": "Flash loan receiver smart contracts",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy": "hardhat run scripts/deploy.ts --network arbitrum"
+  },
+  "devDependencies": {
+    "hardhat": "^2.19.4",
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@types/node": "^20.10.6",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@aave/core-v3": "^1.19.3",
+    "@openzeppelin/contracts": "^5.0.1"
+  }
+}
